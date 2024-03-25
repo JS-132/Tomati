@@ -18,16 +18,16 @@
     }
 
     function bestandReduzieren() {
-        var menge = parseInt(prompt("Geben Sie die Menge ein, um den Bestand zu reduzieren:"));
+        var menge = parseInt(prompt("Hast Du Hunger? Wie viele Tomatis möchtest Du essen?"));
         if (!isNaN(menge)) {
             if (bestand >= menge) {
                 bestand -= menge; // Bestand reduzieren
                 updateBestandsanzeige();
             } else {
-                alert("Nicht genügend Bestand vorhanden!");
+                alert("Leider gibt es nicht genügend Tomatis. Kauf doch welche ein ");
             }
         } else {
-            alert("Ungültige Eingabe! Bitte geben Sie eine gültige Zahl ein.");
+            alert("Ungültige Eingabe! Bitte gib eine gültige Zahl ein.");
         }
     }
 
