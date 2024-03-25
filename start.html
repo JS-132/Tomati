@@ -8,12 +8,12 @@
     var bestand = 20; // Anfangsbestand von 20 Tomaten
 
     function bestandAuffuellen() {
-        var menge = parseInt(prompt("Geben Sie die Menge ein, um den Bestand aufzufüllen:"));
+        var menge = parseInt(prompt("Wie viele Tomatis sollen gekauft werden?"));
         if (!isNaN(menge)) {
             bestand += menge; // Bestand auffüllen
             updateBestandsanzeige();
         } else {
-            alert("Ungültige Eingabe! Bitte geben Sie eine gültige Zahl ein.");
+            alert("Ungültige Eingabe! Bitte gib eine gültige Zahl ein.");
         }
     }
 
