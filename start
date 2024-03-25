@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tomaten-Bestandsverwaltung</title>
+<script>
+    var bestand = 20; // Anfangsbestand von 20 Tomaten
+
+    function bestandAuffuellen() {
+        var menge = parseInt(prompt("Geben Sie die Menge ein, um den Bestand aufzufüllen:"));
+        if (!isNaN(menge)) {
+            bestand += menge; // Bestand auffüllen
+            updateBestandsanzeige();
+        } else {
+            alert("Ungültige Eingabe! Bitte geben Sie eine gültige Zahl ein.");
+        }
+    }
+
+    function bestandReduzieren() {
+        var menge = parseInt(prompt("Geben Sie die Menge ein, um den Bestand zu reduzieren:"));
+        if (!isNaN(menge)) {
+            if (bestand >= menge) {
+                bestand -= menge; // Bestand reduzieren
+                updateBestandsanzeige();
+            } else {
+                alert("Nicht genügend Bestand vorhanden!");
+            }
+        } else {
+            alert("Ungültige Eingabe! Bitte geben Sie eine gültige Zahl ein.");
+        }
+    }
+
+    function updateBestandsanzeige() {
+        document.getElementById("bestand").innerText = bestand;
+    }
+</script>
+</head>
+<body>
+
+<h1>Tomaten-Bestandsverwaltung</h1>
+
+<p>Bestand: <span id="bestand">20</span> Tomaten</p>
+
+<button onclick="bestandAuffuellen()">Bestand auffüllen</button>
+<button onclick="bestandReduzieren()">Bestand reduzieren</button>
+
+</body>
+</html>
